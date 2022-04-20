@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/imgs/icon2.png">
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>AutoFocus | Login</title>
+    <!-- remixi icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/loginPage.CSS">
+</head>
+
+<body>
+    <!-- =============== PRE LOADER =============== -->
+    <div class="loader-bg" onmousemove="playSound()">
+        <img src="assets/imgs/icon2.png">
+    </div>
+
+    <!-- =============== HEADER =============== -->
+    <header class="nav">
+        <div class="left-section">
+            <a href="homePage.html"><img src="assets/imgs/logoHq.png" alt="Logo Img"></a>
+        </div>
+
+        <div class="mid-section">
+            <nav class=".nav__menu">
+                <ul class="navigation">
+                    <li><a href="homePage.html">home</a></li>
+                    <li><a href="homePage.html#services">services</a></li>
+                    <li><a href="homePage.html#advantage">advantage</a></li>
+                    <li><a href="homePage.html#how-it-works">how it works</a></li>
+                    <li><a href="homePage.html#gallery">gallery</a></li>
+                    <li><a href="contactUsPage.html">conatct us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="right-section">
+            <a class="phoneBtn" href="contactUsPage.html"><i class="ri-phone-fill icon"></i>+20 114 7450 629</a>
+        </div>
+    </header>
+
+    <!-- =============== Login =============== -->
+    <section class="login" id="login">
+        <div class="loginContainer">
+            <!-- =============== Login Form =============== -->
+            <div class="loginForm">
+                <h2>AutoFocus <br><span>Login to your account</span></h2>
+
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-box-fill icon"></i></a>
+                    <a href="#"><i class="ri-instagram-fill icon"></i></a>
+                    <a href="#"><i class="ri-twitter-fill icon"></i></a>
+                    <a href="#"><i class="ri-youtube-fill icon"></i></a>
+                </div>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <img class="imgName" src="assets/imgs/username.png" alt="username" />
+                        <input type="text" required>
+                        <span>Username</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <img class="imgPass" src="assets/imgs/lock.png" alt="password" />
+                        <input id="password" type="password" required>
+                        <span>Password</span>
+                        <i id="eye" class="ri-eye-fill" onclick="ShowHide();"></i>
+                        <h6><a href="#">Forget Password ?</a></h6>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="submit" value="Login" required>
+                    </div>
+                    <h3>Don't have an account ? <a href="signUpPage.html">Create</a></h3>
+                </div>
+            </div>
+            <!-- =============== Welcome Form =============== -->
+            <div class="welcomeForm">
+                <div class="text">
+                    <h1>Welcome Back!</h1>
+                    <p>Start Your Clean, Awesome, Comfortable Journey With AutoFocus. </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =============== CAR SOUND =============== -->
+    <audio id="CarSound" preload="auto" src="carSound3.mp3"></audio>
+    
+    <!-- =============== JQUERY =============== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- scroll reveal -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!-- main script -->
+    <script src="assets/js/loginSignUpPages.js"></script>
+    
+</body>
+
+</html>
