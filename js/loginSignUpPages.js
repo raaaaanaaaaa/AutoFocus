@@ -37,15 +37,18 @@ faqs.forEach((faq) => {
 
 // ShowHide function
 const password = document.getElementById("password");
+const ConfirmPassword = document.getElementById("ConfirmPassword");
 const eye = document.getElementById("eye");
 function ShowHide() {
-    if (password.type == 'password') {
+    if (password.type == 'password' && ConfirmPassword.type == 'password') {
         password.setAttribute('type', 'text');
+        ConfirmPassword.setAttribute('type', 'text');
         eye.style.color = '#d41a23';
         eye.classList.add('hide');
     }
     else {
         password.setAttribute('type', 'password');
+        ConfirmPassword.setAttribute('type', 'password');
         eye.style.color = 'rgb(180, 180, 180)';
         eye.classList.remove('hide');
     }
@@ -106,10 +109,10 @@ sr.reveal(".container .contactInfo", { interval: 100, delay: 300, origin: "left"
 // reveal contact form
 sr.reveal(".container .contactForm", { interval: 100, delay: 300, origin: "right" });
 // reveal loginForm 
-sr.reveal(".loginContainer .loginForm", { interval: 100, delay: 300, origin: "left" })
+sr.reveal(".loginContainer .loginForm", { interval: 100, delay: 300, origin: "left" });
 // reveal welcomeForm
-sr.reveal(".loginContainer .welcomeForm", { interval: 100, delay: 300, origin: "right" })
+sr.reveal(".loginContainer .welcomeForm", { interval: 100, delay: 300, origin: "right" });
 // reveal signupForm 
-sr.reveal(".signupContainer .signupForm", { interval: 100, delay: 300, origin: "right" })
+sr.reveal(".signupContainer .signupForm", { interval: 100, delay: 300, origin: "right" });
 // reveal welcomeForm
-sr.reveal(".signupContainer .welcomeForm", { interval: 100, delay: 300, origin: "left" })
+sr.reveal(".signupContainer .welcomeForm", { interval: 100, delay: 300, origin: "left" });
