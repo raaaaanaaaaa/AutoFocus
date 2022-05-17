@@ -1,0 +1,689 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,300&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #131313;
+    overflow-x: hidden;
+}
+
+/*=============== PRE-LOADER ===============*/
+.loader-bg {
+    position: fixed;
+    z-index: 99999999;
+    background-color: #131313;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-bg img {
+    width: 100px;
+    height: 100px;
+    animation: loader 2s linear infinite;
+}
+
+/*=============== HEADER ===============*/
+header {
+    position: fixed;
+    background-color: #131313;
+    box-shadow: 2px 0 10px #000;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 180px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+    transition: 0.3s all ease;
+}
+
+header .left-section {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+}
+
+header .left-section a {
+    text-decoration: none;
+}
+
+header .left-section img {
+    width: 220px;
+}
+
+header .mid-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+}
+
+header .mid-section .navigation li {
+    display: inline;
+    list-style: none;
+    margin: 0 20px;
+}
+
+header .mid-section .navigation li a {
+    text-decoration: none;
+    color: rgb(179, 179, 179);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+header .mid-section .navigation li a:hover {
+    color: #fff;
+}
+
+header .mid-section .navigation li .active-link {
+    color: #fff;
+}
+
+header .right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -10px;
+}
+
+header .right-section a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+header .right-section .phoneBtn {
+    border: 1px solid #fff;
+    padding: 10px 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .right-section .phoneBtn .icon {
+    padding-right: 5px;
+}
+
+header .right-section .phoneBtn:hover {
+    background: #fff;
+    color: #131313;
+}
+
+/*=============== CARS CONTAINER ===============*/
+.cars-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.cars .row {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cars .row .card {
+    position: relative;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    transition: 0.4s;
+    margin: 20px;
+}
+
+.cars .row .card .upper-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.8s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card .upper-section .price {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    font-weight: 400;
+    background-color: #fe0f20;
+    padding: 5px;
+    text-transform: uppercase;
+    border-top-left-radius: 10px;
+    transition: 0.8s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card .upper-section .category {
+    position: absolute;
+    top: 2px;
+    left: 90px;
+    color: #fe0f20;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.8s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card .car-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card .car-image img {
+    width: 100%;
+    transition: 1.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card .lower-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card .lower-section .car-name {
+    max-width: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card .lower-section .color {
+    text-transform: uppercase;
+    color: #fe0f20;
+    font-weight: 400;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card .lower-section a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 300;
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    font-size: 14px;
+    transition: 0.6s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card .lower-section a:hover {
+    background-color: #fff;
+    color: #131313;
+    transition: 0.8s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cars .row .card:hover {
+    background: #fe0f20;
+    cursor: pointer;
+    /* height: 300px; */
+}
+
+.cars .row .card:hover .upper-section .price {
+    background: #131313;
+}
+
+.cars .row .card:hover .upper-section .category {
+    color: #fff;
+}
+
+.cars .row .card:hover .car-image img {
+    transform: scale(1.4);
+}
+
+.cars .row .card:hover .lower-section .color {
+    color: #131313;
+}
+
+/*=============== RESERVATION FORM ===============*/
+.reservation-container {
+    background-color: #131313;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top:20px;
+    left: 0;
+    display: none;
+}
+
+.left-section {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 70px;
+}
+
+.left-section .left-part {
+    display: flex;
+    padding: 0 20px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(10, 10, 10);
+    height: 100%;
+    position: relative;
+}
+
+.left-section .left-part a {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 99;
+}
+
+.left-section .left-part a:hover {
+    background-color: #fe0f20;
+}
+
+.left-section .left-part .img-container {
+    width: 450px;
+    height: auto;
+}
+
+.left-section .left-part img {
+    width: 100%;
+}
+
+.left-section .left-part .CarName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fe0f20;
+}
+
+.left-section .left-part .car-details {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-section .left-part .car-details h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.left-section .left-part .car-details h2 span {
+    color: #eb252f;
+}
+
+.left-section .left-part .car-details .Charactrestic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.left-section .left-part .car-details .Charactrestic .circle {
+    width: 10px;
+    height: 10px;
+    background: #fe0f20;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 #fe0f20;
+    margin-right: 20px;
+}
+
+.left-section .left-part .car-details .Charactrestic h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.left-section .right-part {
+    background-color: #fe0f20;
+    display: flex;
+    padding: 22px 30px;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 500px;
+    z-index: 9;
+}
+
+.left-section .right-part .select-extras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.left-section .right-part .select-extras hr {
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 1.5px dashed #fff;
+    width: 100%;
+}
+
+.left-section .right-part .select-extras .title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.left-section .right-part .select-extras .title span {
+    color: #000;
+}
+
+.left-section .right-part .select-extras h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.left-section .right-part .select-extras .extra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.left-section .right-part .select-extras .extra .extra-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-section .right-part .select-extras .extra .extra-name input {
+    margin-right: 10px;
+}
+
+.left-section .right-part .select-extras .extra .extra-name h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+}
+
+.left-section .right-part .select-extras .extra .price {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+}
+
+.left-section .right-part .select-extras .extra .price span {
+    color: #000;
+}
+
+.left-section .right-part .select-extras .total-price {
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 5px;
+}
+
+.left-section .right-part .select-extras .total-price span {
+    color: #000;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+    height: 100%;
+    margin-left: 60px;
+    margin-top: 70px;
+}
+
+.right-section .title-text {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.right-section .title-text h2 span {
+    color: #fe0f20;
+}
+
+.right-section .title-text h3 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.right-section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.right-section form .input,
+.right-section form .submit-btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 25px;
+    background: #313131;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.right-section form textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 80px;
+    resize: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 25px;
+    background: #313131;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.right-section form input:focus {
+    box-shadow: 0 0 8px 2px #fe0f20;
+}
+
+.right-section form textarea:focus {
+    box-shadow: 0 0 8px 2px #fe0f20;
+}
+
+.right-section form .submit-btn {
+    background-color: #fe0f20;
+    cursor: pointer;
+}
+
+.right-section form .submit-btn:hover {
+    background-color: #e30917;
+}
+
+.right-section form .policy {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right-section form .policy h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.right-section .warning {
+    width: 141%;
+    background-color: #090909;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 15px 40px;
+    margin-top: 30px;
+    margin-left: 45px;
+}
+
+/*=============== SCROLL BAR CUSTOMIZATION ===============*/
+.main::-webkit-scrollbar {
+    height: 100%;
+    display: none;
+    transition: 0.3s;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+    color: #fff;
+    display: block;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #313131;
+}
+
+body::-webkit-scrollbar-thumb {
+    box-shadow: inset 12px 12px 6px #fe0f20;
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+    position: fixed;
+    background-color: #fe0f20;
+    right: 1rem;
+    bottom: -30%;
+    display: inline-flex;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    z-index: 9999;
+    opacity: 0.8;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.scrollup__icon {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.scrollup:hover {
+    background-color: #d41a23;
+    opacity: 1;
+}
+
+/* Show Scroll Up*/
+.show-scroll {
+    bottom: 3rem;
+}
+
+/* ======== ALERTS STYLE ======== */
+.alert-success {
+    animation: hideAnimation 0s ease-in 5s;
+    animation-fill-mode: forwards;
+    z-index: 3;
+    background: #beffcd;
+    font-size: 18px;
+    padding: 20px 40px;
+    margin-top: 100px;
+    min-width: 420px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border-left: 8px solid #3AD66E;
+    border-radius: 4px;
+    color: #3AD66E;
+}
+
+.alert-error {
+    animation: hideAnimation 0s ease-in 5s;
+    animation-fill-mode: forwards;
+    z-index: 3;
+    background: #ffb1b1;
+    font-size: 18px;
+    padding: 20px 40px;
+    margin-top: 100px;
+    min-width: 420px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border-left: 8px solid #FF0000;
+    border-radius: 4px;
+    color: #FF0000;
+}
+
+/*=============== ANIMATIONS ===============*/
+@keyframes loader {
+    0% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(-180deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes hideAnimation {
+    to {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
